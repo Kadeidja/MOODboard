@@ -1,43 +1,5 @@
 import React, { Fragment, useEffect, useState } from 'react';//pour le lien entre le front et le back
 // THIS OK!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-/*
- function TestCompScnd (){
-    const [dataTests, setDataTests] = useState('');
-    let responseClone ; // 1
-
-    useEffect(() => {
-      fetch('/test',
-        {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(dataTests),
-      })//revoir le lien
-      
-      .then(function (response) {
-        responseClone = response.clone(); // 2
-        return response.json();
-    })
-        .then(res => {
-          console.log(dataTests);
-          return res.json()
-          
-        })
-        .then(dataTests => {
-           setDataTests(dataTests);
-         }, 
-         function (rejectionReason) { // 3
-            console.log('Error parsing JSON from response:', rejectionReason, responseClone); // 4
-            responseClone.text() // 5
-            .then(function (bodyText) {
-                console.log('Received the following instead of valid JSON:', bodyText); // 6
-            });}
-        
-        
-        )
-    }, []);
-*/
     function TestCompScnd() {
         const [dataTests, setDataTests] = useState([]);
       

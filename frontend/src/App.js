@@ -1,6 +1,6 @@
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
-import TestComp from './components/testComp';
+//import TestComp from './components/testComp';
 import { RouterProvider } from "react-router-dom";
 import { allroutersfront } from './frontroutes/allroutes';
 
