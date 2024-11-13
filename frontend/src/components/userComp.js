@@ -1,12 +1,12 @@
 import React, { Fragment, useEffect, useState } from 'react';//pour le lien entre le front et le back
 
 
- function TestComp (){
+ function UsersComp (){
     const [dataTests, setDataTests] = useState('');
     let responseClone ; // 1
 
     useEffect(() => {
-      fetch('/test')//revoir le lien
+      fetch('/users')//revoir le lien
       .then(function (response) {
         responseClone = response.clone(); // 2
         return response.json();
@@ -56,4 +56,4 @@ return(
 
 
 }
-export default TestComp;
+export default UsersComp;

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import TestComp from '../components/testComp';
 import LayoutComp from '../components/layoutcomponent';
+import TestCompScnd from '../components/testscndComp';
 export const allroutersfront = createBrowserRouter([
     {
       path: '/',
@@ -10,8 +11,14 @@ export const allroutersfront = createBrowserRouter([
     index: true, 
     element: <LayoutComp/>,
   },{
-    path: '/test',
-    element: <TestComp />    }]
+    path: '/home',
+    element: <TestComp />    }
+    ,{
+        path: '/test',
+        element: <TestCompScnd />    }
+
+
+]
 
 },
 ]);
