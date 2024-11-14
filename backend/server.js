@@ -12,6 +12,12 @@ const BDDTHRD = process.env.BDD_CLUSTER
 expressApp.use(bodyParser.json());
 //PORT CONNEXION
 expressApp.use(cors());
+
+
+//CONNEXION BACKEND ET AUTHENTIFICATION
+expressApp.use('/',require('./backroutes/authRoutes'))
+
+
 const normalizePort = val => {
     const port = parseInt(val, 10);
   
@@ -31,13 +37,15 @@ expressApp.listen(
     }
 );
 
+
+
+
+
+
+
 //BDD CONNEXION FOR USERS
 
-mongoose.connect(`mongodb+srv://${BDDFRST}:${BDDSCND}@${BDDTHRD}.wnujc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`
-,
-
-    { useNewUrlParser: true,
-      useUnifiedTopology: true })
+mongoose.connect(`mongodb+srv://${BDDFRST}:${BDDSCND}@${BDDTHRD}.wnujc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`)
     .then(() => console.log('Connexion à MongoDB réussie !'))
     .catch(() => console.log('Connexion à MongoDB échouée !'));
   
@@ -46,7 +54,7 @@ mongoose.connect(`mongodb+srv://${BDDFRST}:${BDDSCND}@${BDDTHRD}.wnujc.mongodb.n
   
   expressApp.use((req, res, next) => {
       res.setHeader('Access-Control-Allow-Origin', '*');
-      //res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
+      res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
       res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
       next();
     });
@@ -54,6 +62,7 @@ mongoose.connect(`mongodb+srv://${BDDFRST}:${BDDSCND}@${BDDTHRD}.wnujc.mongodb.n
 
 //ROUTERS
 const testRouter = require('./backroutes/testRoute')
+
 
 //MIDDLEWARE
 expressApp.use("/", testRouter);

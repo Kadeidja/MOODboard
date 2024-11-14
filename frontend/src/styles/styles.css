@@ -176,6 +176,23 @@ flex-wrap: wrap;
     width: 100%;
     padding: 0.5rem;
 }
+.btnSpaceClass{
+  display: block;
+  text-align: center;
+  align-items: center;
+}
+.soloBbtnSpaceClass{
+display: inline-flex;
+margin: 2rem;
+}
+.btnSpaceClass label{
+display: flex;
+}
+.btnSpaceClass input{
+  padding: 0.5rem;
+}
+
+
 .loginIcon{
     display: inline-flex;
     margin: none;
