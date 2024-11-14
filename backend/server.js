@@ -9,7 +9,11 @@ const BDDFRST = encodeURIComponent(process.env.BDD_OWNER)
 const BDDSCND = encodeURIComponent(process.env.BDD_PSWD)
 const BDDTHRD = process.env.BDD_CLUSTER
 
-expressApp.use(bodyParser.json());
+//MIDDLEWARE
+expressApp.use(expressRequire.json());
+//expressApp.use(express.static('www')); !!!
+//expressApp.use(bodyParser.urlencoded({ extended: true }));
+//expressApp.use(bodyParser.json());
 //PORT CONNEXION
 expressApp.use(cors());
 
@@ -36,9 +40,6 @@ expressApp.listen(
         console.log(`Server is running on port ${port}`);
     }
 );
-
-
-
 
 
 

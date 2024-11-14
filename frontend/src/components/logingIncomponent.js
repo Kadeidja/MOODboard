@@ -37,7 +37,7 @@ return(
           className="loginIcon"
           src={keyIcon}
           alt="icon"/>
-          <input id="userMail" name="loginmailinput" type="email" className="inputcssClass" placeholder="Entrez votre e-mail" required value={dataLogin.email} onChange={(e)=>setDataLogin({...dataLogin, email: e.target.value})}/>
+          <input id="userMail" name="loginmailinput" type="email" className="inputcssClass" placeholder="Entrez votre e-mail" value={dataLogin.email} onChange={(e)=>setDataLogin({...dataLogin, email: e.target.value})}/>
         <br/>
         </div>
 
@@ -47,7 +47,7 @@ return(
           className="loginIcon"
           src={keyIcon}
           alt="icon"/>
-                <input id="userPswd" name="loginpswdinput" type="password" className="inputcssClass" placeholder="Entrez votre mot de passe" required value={dataLogin.password} onChange={(e)=>setDataLogin({...dataLogin, password: e.target.value})}/>
+                <input id="userPswd" name="loginpswdinput" type="password" className="inputcssClass" placeholder="Entrez votre mot de passe" value={dataLogin.password} onChange={(e)=>setDataLogin({...dataLogin, password: e.target.value})}/>
             <br/>
         </div>
 
@@ -57,12 +57,6 @@ return(
             <label id="userSubmitLogInId" className="labelClass" htmlFor="userSubmit">
                 <input id="userSubmit" name="loginSubmitinput" type="submit" className="buttoncssClass loginBtn"  value="Soumettre"/>
             </label>
-        </div>
-
-        <div className='soloBbtnSpaceClass'>
-            <label id="userSubscriptionLogInId" className="labelClass" htmlFor="userSubscription">
-                <input id="userSubscription" name="loginSubscriptioninput" type="submit" className="buttoncssClass loginBtn"  value="S'inscrire"/>
-            </label> 
         </div>
 </div>
         </form>

@@ -1,5 +1,7 @@
 const userModel = require('../backmodels/usermodel');
+
 const asyncHandler = require("express-async-handler");
+
 
 exports.createuserModel = asyncHandler(async(req, res)=>{
     const user = await userModel.create(req.body);

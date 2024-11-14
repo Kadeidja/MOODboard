@@ -1,4 +1,4 @@
-export default function Homepages(){
+export default function LandingComp(){
     return(
         <>
         </>

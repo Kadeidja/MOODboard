@@ -2,10 +2,11 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userModelSchema = new Schema({
-    userName: { Type: String/*, required: true*/ },
-    userEmail: { Type: String/*, required: true*/ },
-    userPswd: { Type: Password/*, required: true*/ }
+    userName: { Type: String},
+    userEmail: { Type: String},
+    userPswd: { Type: String}
   });
-  
-  // Export function to create "carrerModel" model class
-  module.exports = mongoose.model("userModel", userModelSchema);
+    // Export function to create "userModel" model class in the database
+  const UsersModel = mongoose.model("userCollection", userModelSchema);
+
+  module.exports = UsersModel;
