@@ -33,7 +33,7 @@ const creatingUser = await UsersModel.create({
     name, email, password
 })
 
-return res.json(creatingUser)
+res.json(creatingUser)
 
 } catch (error) {
     console.log(error)    
