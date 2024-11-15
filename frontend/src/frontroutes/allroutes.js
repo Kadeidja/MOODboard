@@ -27,7 +27,10 @@ export const allroutersfront = createBrowserRouter([
         element: <TestCompScnd />  },
     {
           path: '/login',
-          element: <LogInComp />  }
+          element: <LogInComp />  },
+        {
+            path: '/subscription',
+            element: <SubscriptionComp />  }
 
 
 ]

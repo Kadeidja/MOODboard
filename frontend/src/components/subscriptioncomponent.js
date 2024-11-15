@@ -5,14 +5,14 @@ import axios from 'axios'
 import { TheReButton } from './reusablecomponent';
 import {toast} from 'react-hot-toast';
 import { useNavigate } from 'react-router-dom';
-
+//import { Link, useNavigate } from 'react-router-dom';
+//import { useDispatch, useSelector } from 'react-redux';
 
 
 export default function SubscriptionComp(){
-const navigation = useNavigate();
-
+    const navigation = useNavigate();
+    //const dispatch = useDispatch();
 const [dataSubscription,setDataSubscription] = useState(
-    
     {
     name: '',
     email:'',
@@ -34,12 +34,13 @@ const subscriptionUser = async (e) =>{
         } else {
             setDataSubscription({})
             toast.success('Logged Up!!!')
-            navigation('/login')
+            navigation('/')
         }
     } catch (error) {
         console.log(error)
     }
 }
+
 return(
 <>
 <div className="boxDivClass divLogIn">
